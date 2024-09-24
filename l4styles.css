@@ -1,0 +1,44 @@
+body {
+    background-color: green;
+}
+
+#secone {
+    width: 50%;
+    float: left;
+    border: 3px solid white;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: lightskyblue;
+    margin-bottom: 10px;
+}
+
+#sectwo{
+    width: 45%;
+    float: right;
+    border: 3px solid white;
+    padding: 5px;
+    text-align: center;
+    background-color: lightskyblue;
+}
+
+#secthree{
+    width: 50%;
+    float: left;
+    border: 3px solid white;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: lightskyblue;
+}
+
+#secfour {
+    width: 45%;
+    float: right;
+    border: 3px solid white;
+    padding: 5px;
+    text-align: center;
+    background-color: lightskyblue;
+}
+
+
