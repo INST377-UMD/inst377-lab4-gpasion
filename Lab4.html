@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="l4styles.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4</title>
+</head>
+<body id = 'body'>
+    <h1 id = "heading">INST377 - Lab 4</h1>
+        <section>
+            <div id = "secone">
+                <form id = "alertForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <button type="submit" onclick="greetingAlert()">Alert Me!</button>
+                    <script>
+                        function greetingAlert() {
+                            event.preventDefault();
+                            const name = document.getElementById('name').value;
+                            if(name) {
+                                return alert("Hi " + name + "!");
+                            }
+                        }
+                    </script>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div id = "sectwo">
+                <button type="color" onclick="changeColor()">Change Color</button>
+                <script type = "text/javascript">
+                    function changeColor() {
+                        if(document.body.style.backgroundColor == 'purple'){
+                            document.body.style.backgroundColor = 'green';
+                        } else {
+                            document.body.style.backgroundColor = 'purple';
+                            
+                        }
+                    }
+                </script>
+            </div>
+        </section>
+
+        <section>
+            <div id = "secthree">
+
+                <form id ='validationForm' onsubmit = "return(validate())">
+                    <label>Text Tester: </label>
+                    <input type="text" id="textTest">
+                    <input type="submit" value ="Validate Text">
+                </form>
+                <script>
+                    function validate(){
+                        const specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                        if (specialChars.test(document.getElementById('textTest').value)) {
+                            alert('Error: No special characters')
+                        return false
+                        }
+                    return true;
+                    }
+                </script>
+            </div>
+        </section>
+
+        <section>
+            <div id = "secfour">
+                <button type="button" onclick="addText()">Add Text</button>
+                <script>
+                    function addText(){
+                        const heading = document.getElementById('heading');
+                        heading.innerHTML += ' helloworld';
+                    }
+                </script>
+            </div>
+        </section>
+</body>
+</html>
